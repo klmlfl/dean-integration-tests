@@ -10,7 +10,7 @@ public class createOSProcess {
     public static void main(String[] args) {
         try {
             String line;
-            List<String> params = java.util.Arrays.asList("ls"); //"git", "pull"
+            List<String> params = java.util.Arrays.asList("git", "pull"); //"git", "pull"
             // Runtime.getRuntime().exec(new String[] {"npm", "help"});
             ProcessBuilder pb = new ProcessBuilder(params); //
             Process p = pb.start(); //
