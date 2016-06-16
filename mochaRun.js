@@ -123,7 +123,91 @@ describe('Start processes', function() {
         });
     });
 
+});
+
+
+describe('Play events through DEAN', function() {
+
+
+    it('set Dates', function(done) {
+        var output = "data";
+
+        var outputCB = function(data) {
+            output = data;
+        };
+
+        cmd.run('cd /Users/srahman/Repos/dean-management/');
+        cmd.get('dean play-events /Users/srahman/Repos/jsonevents/dates.json',function(data){
+            outputCB(data);
+            done()
+        });
+    });
+
+
+    it('play Person events', function(done) {
+        var output = "data";
+
+        var outputCB = function(data) {
+            output = data;
+        };
+
+        cmd.run('cd /Users/srahman/Repos/dean-management/');
+        cmd.get('dean play-events /Users/srahman/Repos/jsonevents/person-events.json',function(data){
+            outputCB(data);
+            done()
+        });
+    });
+
+
+    it('play Course events', function(done) {
+        var output = "data";
+
+        var outputCB = function(data) {
+            output = data;
+
+        };
+
+        cmd.run('cd /Users/srahman/Repos/dean-management/');
+        cmd.get('dean play-events /Users/srahman/Repos/jsonevents/course-events.json',function(data){
+            outputCB(data);
+            done()
+
+        });
+    });
+
+
+    it('play Course-Section events', function(done) {
+        var output = "data";
+
+        var outputCB = function(data) {
+            output = data;
+
+        };
+
+        cmd.run('cd /Users/srahman/Repos/dean-management/');
+        cmd.get('dean play-events /Users/srahman/Repos/jsonevents/course-section-events.json',function(data){
+            outputCB(data);
+            done()
+
+        });
+    });
+
+    it('play Enrollment events', function(done) {
+        var output = "data";
+
+        var outputCB = function(data) {
+            output = data;
+
+        };
+
+        cmd.run('cd /Users/srahman/Repos/dean-management/');
+        cmd.get('dean play-events /Users/srahman/Repos/jsonevents/enrollment-events.json',function(data){
+            outputCB(data);
+            done()
+
+        });
+    });
+
 
 
 });
-
